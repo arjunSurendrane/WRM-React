@@ -17,16 +17,16 @@ export default function MenuButton() {
   const [openModal, setOpenModal] = useState(false);
 
   return (
-    <div>
+    <div className="fixed bottom-5 right-5">
       {openModal && <AddTask setShowModal={() => setOpenModal(false)} />}
       <SpeedDial
         ariaLabel="SpeedDial basic example"
-        sx={{
-          position: "absolute",
-          bottom: 16,
-          right: 16,
-          //   "& .MuiFab-primary": { backgroundColor: "#7b68ee", color: "#fff" },
-        }}
+        // sx={{
+        //   position: "absolute",
+        //   bottom: 16,
+        //   right: 16,
+        //   //   "& .MuiFab-primary": { backgroundColor: "#7b68ee", color: "#fff" },
+        // }}
         icon={<VscRocket />}
       >
         {actions.map((action) => (

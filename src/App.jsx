@@ -12,6 +12,7 @@ import Online from "./Pages/Online";
 import Chat from "./Pages/Chat";
 import DepartmentList from "./Pages/DepartmentList";
 import TaskBoard from "./Pages/TaskBoard";
+import TaskView from "./Pages/TaskView";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
         <Route path="/chat" element={<Chat />} />
         <Route path="/department/list" element={<DepartmentList />} />
         <Route path="/department/board" element={<TaskBoard />} />
+        <Route path="/task" element={<TaskView />} />
       </Routes>
     </div>
   );

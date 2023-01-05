@@ -3,7 +3,7 @@ import React from "react";
 export default function Board() {
   return (
     <div>
-      <div className="flex justify-between md:mx-14 mx-5 mt-10  md:w-[70vw] w-[87vw] px-2   ">
+      <div className="md:flex justify-between md:mx-14 mx-5 mt-10  md:w-[70vw] w-[87vw] px-2   ">
         <div>
           <p className="font-medium text-sm text-gray-500">TODO</p>
           <div className="w-56 h-56 bg-gray-100 mt-3 border border-t-gray-500 border-t-4 rounded-t-lg shadow-lg"></div>

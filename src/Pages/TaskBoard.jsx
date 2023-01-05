@@ -17,7 +17,9 @@ export default function TaskBoard() {
       <div className="md:mx-[18%] absolute items-center">
         <Board />
       </div>
-      <MenuButton />
+      <div className="">
+        <MenuButton />
+      </div>
     </div>
   );
 }
