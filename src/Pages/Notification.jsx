@@ -1,12 +1,11 @@
 import React, { useEffect } from "react";
 import { useCookies } from "react-cookie";
 import { useNavigate } from "react-router-dom";
-import Footer from "../Component/Footer";
-import MiniDrawer from "../Component/MuiSidebar";
 import Navbar from "../Component/Navbar";
+import Notifications from "../Component/Notification/notifications";
 import Sidebar from "../Component/Sidebar";
 
-export default function WorkSpace() {
+export default function Notification() {
   const [cookies, setCookie] = useCookies();
   const history = useNavigate();
   useEffect(() => {
@@ -17,8 +16,10 @@ export default function WorkSpace() {
   return (
     <div>
       <Sidebar />
-      <Navbar heading={"Workspace"} />
-      {/* <Footer /> */}
+      <Navbar heading={"Notification"} />
+      <div className="md:mx-[18%] absolute items-center">
+        <Notifications />
+      </div>
     </div>
   );
 }

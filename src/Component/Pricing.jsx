@@ -19,7 +19,9 @@ export default function Pricing(props) {
           <button
             className="  mt-2 rounded-md bg-[#00b884] text-white w-[150px] h-[40px] "
             onClick={() => {
-              props.page == "landing" ? history("/signup") : history("/home");
+              props.page == "landing"
+                ? history("/signup")
+                : history("/workspace");
             }}
           >
             Free Forever

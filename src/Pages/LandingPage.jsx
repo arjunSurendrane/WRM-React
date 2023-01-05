@@ -6,12 +6,19 @@ import LandingNav from "../Component/LandingNavbar";
 import Pricing from "../Component/Pricing";
 import { useSelector } from "react-redux";
 import { useEffect } from "react";
+import { useCookies } from "react-cookie";
+import { useNavigate } from "react-router-dom";
 
 export default function LandingPage() {
-  const user = useSelector((state) => state.user);
+  const [cookies, setCookie] = useCookies();
+  const history = useNavigate();
+  console.log({ token: cookies });
+  console.log("heey");
   useEffect(() => {
-    console.log(user);
-  }, []);
+    if (cookies.userJwt) {
+      history("/workspace");
+    }
+  });
   return (
     <div>
       <LandingNav />

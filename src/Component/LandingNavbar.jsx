@@ -1,5 +1,6 @@
 import * as React from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
+import logo from "../assets/toppng.com-teamwork-icon-black-and-white-407x435.png";
 
 export default function LandingNav() {
   const [nav, setNav] = React.useState(false);
@@ -8,6 +9,7 @@ export default function LandingNav() {
   };
   return (
     <div className="items-center flex justify-between h-24 max-w-[1240px] mx-auto px-4">
+      <img src={logo} alt="" className="w-10 h-10" />
       <h1 className="w-full text-3xl font-bold text-[#75337d]">Onus</h1>
       <div className=" hidden md:flex">
         <ul className="flex">
@@ -31,7 +33,7 @@ export default function LandingNav() {
             : `fixed left-[-100%] `
         }
       >
-        <h1 className="w-full text-3xl font-bold text-[#75337d] m-4">Navbar</h1>
+        <h1 className="w-full text-3xl font-bold text-[#75337d] m-4">Onus</h1>
         <ul className="p-4  uppercase">
           <li className="p-4 border-gray-900 font-bold">Home</li>
           <li className="p-4 border-gray-900 font-bold">About</li>

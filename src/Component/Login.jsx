@@ -41,7 +41,7 @@ export default function Login() {
       console.log(res.data.status);
       if (res.data.status === "success") {
         setCookie("userJwt", res.data.token, { path: "/" });
-        history("/workspace");
+        history("/home");
       }
     } catch (error) {
       console.log(error.response.data);

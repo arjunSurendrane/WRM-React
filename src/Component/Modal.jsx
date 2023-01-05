@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { registerUser } from "../features/users/userSlice";
+import { useCookies } from "react-cookie";
 
 export default function Modal({
   setShowModal,
@@ -14,6 +15,7 @@ export default function Modal({
 }) {
   const dispatch = useDispatch();
   const [errorMsg, setErrorMsg] = useState();
+  const [cookies, setCookie] = useCookies();
   const user = useSelector((state) => state.user);
   const history = useNavigate();
   const [data, setData] = useState("");
@@ -42,7 +44,8 @@ export default function Modal({
         res = await axios.post(api, { email: user.user.email, otp: data });
         console.log(res);
         if (res.data.status == "success") {
-          history("/workspace");
+          setCookie("userJwt", res.data.token, { path: "/" });
+          history("/home");
         }
       } catch (error) {
         if (error.response.data.status == "fail") {

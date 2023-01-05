@@ -63,7 +63,7 @@ export default function OtpVerification() {
       });
       if (res.data.status == "success") {
         setCookie("userJwt", res.data.token, { path: "/" });
-        history("/workspace");
+        history("/home");
       }
     } catch (error) {
       if (error.response.data.error == "invalid otp") {
