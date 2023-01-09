@@ -1,5 +1,5 @@
 import React from "react";
-import Task from "../Component/Task/Task";
+import Task from "../Component/User/Task/Task";
 
 export default function TaskView() {
   return (

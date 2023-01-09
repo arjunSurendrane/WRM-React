@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
 import { useCookies } from "react-cookie";
 import { useNavigate } from "react-router-dom";
-import Footer from "../Component/Footer";
+import Footer from "../Component/User/Footer/Footer";
 import MiniDrawer from "../Component/MuiSidebar";
-import Navbar from "../Component/Navbar";
-import Sidebar from "../Component/Sidebar";
+import Navbar from "../Component/User/Navbar/Navbar";
+import Sidebar from "../Component/User/Sidebar/Sidebar";
 
 export default function WorkSpace() {
   const [cookies, setCookie] = useCookies();
@@ -17,7 +17,7 @@ export default function WorkSpace() {
   return (
     <div>
       <Sidebar />
-      <Navbar heading={"Workspace"} />
+      <Navbar heading={"Workspace"} active={"h"} />
       {/* <Footer /> */}
     </div>
   );
